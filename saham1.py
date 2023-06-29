@@ -33,7 +33,7 @@ with st.container(): #pengambilan data
     tech_list = ['INDF', 'ADES', 'GOOD', 'CAMP']
 
     # Pengambilan data
-    col1, col2, col3 = st.columns([1,1,3])
+    col1, col2, col3, col4 = st.columns([1,1,1,2])
     with col1:
         start = st.date_input(
             "Start :"
@@ -43,20 +43,29 @@ with st.container(): #pengambilan data
             "End :"
             )
     with col3:
-        st.empty()
+        for stock in tech_list:
+            globals()[stock] = yf.download(stock, start, end)
 
-
-#if st.button('Lanjut'):
-    #end = datetime.now()
-    #start = datetime(end.year - 1, end.month, end.day)
-    for stock in tech_list:
-        globals()[stock] = yf.download(stock, start, end)
-
-    company_list = [INDF, ADES, GOOD, CAMP]
-    company_name = ["PT. Indofood Sukses Makmur Tbk", "PT. Akasha Wira International Tbk", "PT. Garudafood Putra Putri Jaya Tbk", "PT. Campina Ice Cream Industry Tbk"]
+        company_list = [INDF, ADES, GOOD, CAMP]
+        company_name = ["PT. Indofood Sukses Makmur Tbk", "PT. Akasha Wira International Tbk", "PT. Garudafood Putra Putri Jaya Tbk", "PT. Campina Ice Cream Industry Tbk"]
 
     for company, com_name in zip(company_list, company_name):
         company["company_name"] = com_name
+        sb1 = st.selectbox("Pilih Data", ["PT. Indofood Sukses Makmur Tbk", "PT. Akasha Wira International Tbk", "PT. Garudafood Putra Putri Jaya Tbk", "PT. Campina Ice Cream Industry Tbk"])
+                option1 = {
+                    'PT. Indofood Sukses Makmur Tbk': INDF,
+                    'PT. Akasha Wira International Tbk': ADES,
+                    'PT. Garudafood Putra Putri Jaya Tbk': GOOD,
+                    'PT. Campina Ice Cream Industry Tbk': CAMP
+                }
+    with col4:
+        st.empty()
+
+
+if st.button('Lanjut'):
+    #end = datetime.now()
+    #start = datetime(end.year - 1, end.month, end.day)
+    
 
     with st.container(): #Tren Data
         st.header("Analisis Data")
@@ -64,13 +73,7 @@ with st.container(): #pengambilan data
         with col5:
             col1, col2 = st.columns([1,3])
             with col1:
-                sb1 = st.selectbox("Pilih Data", ["PT. Indofood Sukses Makmur Tbk", "PT. Akasha Wira International Tbk", "PT. Garudafood Putra Putri Jaya Tbk", "PT. Campina Ice Cream Industry Tbk"])
-                option1 = {
-                    'PT. Indofood Sukses Makmur Tbk': INDF,
-                    'PT. Akasha Wira International Tbk': ADES,
-                    'PT. Garudafood Putra Putri Jaya Tbk': GOOD,
-                    'PT. Campina Ice Cream Industry Tbk': CAMP
-                }
+                st.empty()
             with col2:
                 st.empty()
             col1, col2 = st.columns([8,1])
