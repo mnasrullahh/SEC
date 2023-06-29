@@ -49,15 +49,15 @@ with st.container(): #pengambilan data
         company_list = [INDF, ADES, GOOD, CAMP]
         company_name = ["PT. Indofood Sukses Makmur Tbk", "PT. Akasha Wira International Tbk", "PT. Garudafood Putra Putri Jaya Tbk", "PT. Campina Ice Cream Industry Tbk"]
 
-    for company, com_name in zip(company_list, company_name):
-        company["company_name"] = com_name
+        for company, com_name in zip(company_list, company_name):
+            company["company_name"] = com_name
         sb1 = st.selectbox("Pilih Data", ["PT. Indofood Sukses Makmur Tbk", "PT. Akasha Wira International Tbk", "PT. Garudafood Putra Putri Jaya Tbk", "PT. Campina Ice Cream Industry Tbk"])
-                option1 = {
-                    'PT. Indofood Sukses Makmur Tbk': INDF,
-                    'PT. Akasha Wira International Tbk': ADES,
-                    'PT. Garudafood Putra Putri Jaya Tbk': GOOD,
-                    'PT. Campina Ice Cream Industry Tbk': CAMP
-                }
+        option1 = {
+            'PT. Indofood Sukses Makmur Tbk': INDF,
+            'PT. Akasha Wira International Tbk': ADES,
+            'PT. Garudafood Putra Putri Jaya Tbk': GOOD,
+            'PT. Campina Ice Cream Industry Tbk': CAMP
+            }
     with col4:
         st.empty()
 
