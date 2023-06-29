@@ -46,7 +46,7 @@ with st.container(): #pengambilan data
         st.empty()
 
 
-if st.button('Lanjut'):
+#if st.button('Lanjut'):
     #end = datetime.now()
     #start = datetime(end.year - 1, end.month, end.day)
     for stock in tech_list:
