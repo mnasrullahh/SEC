@@ -15,11 +15,11 @@ import altair as alt
 from datetime import datetime
 
 st.set_page_config(
-    page_title = "Analisis dan Visualisasi Saham Indusri Makanan & Minuman",
+    page_title = "Analisis dan Visualisasi Saham Industri Makanan & Minuman",
     layout = "wide" #'centered'
 )
 
-st.title("Analisis dan Visualisasi Saham Indusri Makanan & Minuman")
+st.title("Analisis dan Visualisasi Saham Industri Makanan & Minuman")
 st.write("Streamlit App by Saga Group")
 st.divider()
 
@@ -170,7 +170,7 @@ if st.button('Lanjut'):
         with col2:
             tab1, tab2 = st.tabs(['Ringkas','Rinci'])
             with tab1:
-                st.write("Grafik ini memberikan gambaran visual tentang hubungan antara perkiraan pengembalian dan risiko dari masing-masing saham teknologi yang dianalisis. Dengan melihat posisi relatif dan distribusi titik-titik tersebut, investor dapat mendapatkan wawasan tentang saham-saham yang mungkin menawarkan potensi pengembalian yang lebih tinggi dengan risiko yang lebih rendah, atau sebaliknya.")
+                st.write("Grafik ini memberikan gambaran visual tentang hubungan antara perkiraan pengembalian dan risiko dari masing-masing saham Industri Makanan & Minuman yang dianalisis. Dengan melihat posisi relatif dan distribusi titik-titik tersebut, investor dapat mendapatkan wawasan tentang saham-saham yang mungkin menawarkan potensi pengembalian yang lebih tinggi dengan risiko yang lebih rendah, atau sebaliknya.")
             with tab2:    
                 st.write("1. **Hubungan antara perkiraan pengembalian dan risiko**, Grafik ini menunjukkan hubungan antara perkiraan pengembalian yang diharapkan dan tingkat risiko dari masing-masing saham teknologi. Garis horizontal (sumbu x) mewakili perkiraan pengembalian, sedangkan garis vertikal (sumbu y) mewakili tingkat risiko.")
                 st.write("2. **Distribusi risiko dan pengembalian**, Titik-titik yang tersebar pada grafik menunjukkan masing-masing saham teknologi. Ukuran titik-titik tersebut menggambarkan distribusi risiko dari setiap saham. Semakin besar titik, semakin besar risikonya. Jika ada titik yang berada di sebelah kiri (di bawah garis harapan pengembalian yang lebih rendah), maka saham tersebut dapat dikatakan memiliki risiko yang tinggi dengan pengembalian yang rendah. Sebaliknya, jika ada titik yang berada di sebelah kanan (di atas garis harapan pengembalian yang lebih tinggi), maka saham tersebut dapat dikatakan memiliki risiko yang rendah dengan pengembalian yang tinggi.")
